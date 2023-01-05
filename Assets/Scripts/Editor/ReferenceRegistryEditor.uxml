@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label tabindex="-1" text="Prefabs" display-tooltip-when-elided="true" style="display: none;" />
+    <ui:ListView focusable="true" reorderable="true" show-add-remove-footer="true" name="prefabDict" show-border="true" show-bound-collection-size="true" style="display: none;" />
+    <ui:Label tabindex="-1" text="Tiles" display-tooltip-when-elided="true" style="display: none;" />
+    <ui:ListView focusable="true" reorderable="true" show-add-remove-footer="true" name="tileDict" show-border="true" show-bound-collection-size="true" style="display: none;" />
+    <ui:VisualElement name="unityInspector" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);" />
+</ui:UXML>
