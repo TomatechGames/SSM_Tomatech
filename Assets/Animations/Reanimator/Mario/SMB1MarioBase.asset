@@ -1,0 +1,440 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7327627887730422668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: runAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -64454161, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -801277093, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1438092416, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: runFrame
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 7805bdbf-8e97-4b8c-ad9a-bbcaed2042c8
+  drivers:
+    keys:
+    - setFPS
+    values: 14000000
+--- !u!114 &-6044234189253222972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: skidAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 1053879, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 10cd8def-db1f-4333-9439-7dbe0f9c9205
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &-4682814404175167969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: yState
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 313990200548394156}
+  - {fileID: -2619081181025910418}
+  - {fileID: 313990200548394156}
+  controlDriver:
+    name: yState
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 8155745f-28fe-47fc-beb2-00cf90f0ae24
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &-3564078978169408411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: crouchAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -2137244044, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 1f728597-5f63-4ae1-abef-0ad74af5ea59
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &-2619081181025910418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: skidding
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 4118388784711295280}
+  - {fileID: -6044234189253222972}
+  controlDriver:
+    name: isSkidding
+    autoIncrement: 0
+    percentageBased: 0
+    guid: b7720066-b374-4791-b392-506fb2beaafc
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107d863357f79f249a979104998582e2, type: 3}
+  m_Name: SMB1MarioBase
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 6266329295363836259}
+  nodeData:
+  - node: {fileID: -4682814404175167969}
+    position: {x: 757, y: 250}
+  - node: {fileID: -2619081181025910418}
+    position: {x: 1012, y: 250}
+  - node: {fileID: 4118388784711295280}
+    position: {x: 1265, y: 250}
+  - node: {fileID: 47857424509557954}
+    position: {x: 1519, y: 250}
+  - node: {fileID: 194025475375534582}
+    position: {x: 1519, y: 351}
+  - node: {fileID: 8088625803537741962}
+    position: {x: 1519, y: 452}
+  - node: {fileID: -7327627887730422668}
+    position: {x: 1519, y: 553}
+  - node: {fileID: -6044234189253222972}
+    position: {x: 1265, y: 423}
+  - node: {fileID: -3564078978169408411}
+    position: {x: 757, y: 399}
+  - node: {fileID: 6266329295363836259}
+    position: {x: 503, y: 250}
+  - node: {fileID: 313990200548394156}
+    position: {x: 1012, y: 403}
+  - node: {fileID: 5573909520960542027}
+    position: {x: 1265, y: 651}
+  - node: {fileID: 5446020693868571606}
+    position: {x: 1265, y: 550}
+  driverData:
+  - guid: c2e48ce1b13a97a48be6bcb92d7a4785
+    name: yState
+    connectionNames:
+    - yState
+    position: {x: 659, y: 225}
+  - guid: 0d914eb083393a6439f7e89e53d607d1
+    name: isSkidding
+    connectionNames:
+    - skidding
+    position: {x: 891, y: 225}
+  - guid: 592f7a59140df8d4e956810050a2621e
+    name: xState
+    connectionNames:
+    - xState
+    position: {x: 1168, y: 225}
+  - guid: 18489afeae62eeb4daa4e37768461536
+    name: isCrouched
+    connectionNames:
+    - crouching
+    position: {x: 255, y: 325}
+  - guid: ee92c46b115968a44ad1929be0c4cd15
+    name: runFrame
+    connectionNames:
+    - walkAnim
+    - runAnim
+    - trotAnim
+    - fallAnim
+    position: {x: 1288.0002, y: 528.00006}
+  - guid: 3113e9f6d064c5b4ca2c638eb5e8bfec
+    name: didJump
+    connectionNames:
+    - New Switch Node
+    position: {x: 798, y: 500}
+  driverBlackboard:
+  - isCrouched
+  - isSkidding
+  - yState
+  - xState
+  - runFrame
+  - didJump
+  rootPos: {x: 250, y: 250}
+--- !u!114 &47857424509557954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: stillAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 1380237381, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 04385f02-c2bc-46c4-826b-3c13785d68b2
+  drivers:
+    keys:
+    - runFrame
+    values: 00000000
+--- !u!114 &194025475375534582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: trotAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -64454161, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -801277093, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1438092416, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: runFrame
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 59de6a1c-20fa-42e7-87de-147f4a53452a
+  drivers:
+    keys:
+    - setFPS
+    values: 05000000
+--- !u!114 &313990200548394156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: New Switch Node
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 5446020693868571606}
+  - {fileID: 5573909520960542027}
+  controlDriver:
+    name: didJump
+    autoIncrement: 0
+    percentageBased: 0
+    guid: f731aa4b-083d-41e9-88ef-dd81117b4d0a
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &4118388784711295280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: xState
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 47857424509557954}
+  - {fileID: 194025475375534582}
+  - {fileID: 8088625803537741962}
+  - {fileID: -7327627887730422668}
+  controlDriver:
+    name: xState
+    autoIncrement: 0
+    percentageBased: 0
+    guid: a22fb61e-6d43-4ed8-9434-c1e25c17e63d
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &5446020693868571606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: fallAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -64454161, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys:
+      - runFrame
+      values: 00000000
+  - sprite: {fileID: -801277093, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys:
+      - runFrame
+      values: 01000000
+  - sprite: {fileID: -1438092416, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys:
+      - runFrame
+      values: 02000000
+  controlDriver:
+    name: runFrame
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 4421b4ee-26b8-492f-8c45-60639ed5f9a1
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &5573909520960542027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: jumpAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 878577768, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 0
+    guid: dd15e6b1-5132-48e2-beba-ddfc5f8b58bf
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &6266329295363836259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: crouching
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -4682814404175167969}
+  - {fileID: -3564078978169408411}
+  controlDriver:
+    name: isCrouched
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 397924b0-faca-4ab1-8588-48c0c3808454
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &8088625803537741962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: walkAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -64454161, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -801277093, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1438092416, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: runFrame
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 72a0d011-02b6-4c4d-b9aa-25dd1911e043
+  drivers:
+    keys: []
+    values: 

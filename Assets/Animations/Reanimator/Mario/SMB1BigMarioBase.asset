@@ -1,0 +1,270 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7427596004921753964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: Ovr_runAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -479017810, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1286172563, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1776045478, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: runFrame
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 7805bdbf-8e97-4b8c-ad9a-bbcaed2042c8
+  drivers:
+    keys:
+    - setFPS
+    values: 14000000
+--- !u!114 &-6075868252249218271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: Ovr_jumpAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -1756459924, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 0
+    guid: dd15e6b1-5132-48e2-beba-ddfc5f8b58bf
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &-582422647101621887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: Ovr_trotAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -479017810, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1286172563, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1776045478, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: runFrame
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 59de6a1c-20fa-42e7-87de-147f4a53452a
+  drivers:
+    keys:
+    - setFPS
+    values: 05000000
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b74fdb743d709f4ba395a5342ba0cf7, type: 3}
+  m_Name: SMB1BigMarioBase
+  m_EditorClassIdentifier: 
+  graphNode: {fileID: 11400000, guid: 655b974a9023aa94f82d06fcc216f2f2, type: 2}
+  overrides:
+  - fromNode: {fileID: 5573909520960542027, guid: 655b974a9023aa94f82d06fcc216f2f2, type: 2}
+    toNode: {fileID: -6075868252249218271}
+  - fromNode: {fileID: 47857424509557954, guid: 655b974a9023aa94f82d06fcc216f2f2, type: 2}
+    toNode: {fileID: 292873548873298750}
+  - fromNode: {fileID: 194025475375534582, guid: 655b974a9023aa94f82d06fcc216f2f2, type: 2}
+    toNode: {fileID: -582422647101621887}
+  - fromNode: {fileID: 8088625803537741962, guid: 655b974a9023aa94f82d06fcc216f2f2, type: 2}
+    toNode: {fileID: 2232587826929309422}
+  - fromNode: {fileID: -7327627887730422668, guid: 655b974a9023aa94f82d06fcc216f2f2, type: 2}
+    toNode: {fileID: -7427596004921753964}
+  - fromNode: {fileID: -6044234189253222972, guid: 655b974a9023aa94f82d06fcc216f2f2, type: 2}
+    toNode: {fileID: 1033102425058499729}
+  - fromNode: {fileID: -3564078978169408411, guid: 655b974a9023aa94f82d06fcc216f2f2, type: 2}
+    toNode: {fileID: 7568137916057254638}
+  - fromNode: {fileID: 5446020693868571606, guid: 655b974a9023aa94f82d06fcc216f2f2, type: 2}
+    toNode: {fileID: 7275204175381319932}
+--- !u!114 &292873548873298750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: Ovr_stillAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -803913255, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 04385f02-c2bc-46c4-826b-3c13785d68b2
+  drivers:
+    keys:
+    - runFrame
+    values: 00000000
+--- !u!114 &1033102425058499729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: Ovr_skidAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -1419959403, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 10cd8def-db1f-4333-9439-7dbe0f9c9205
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &2232587826929309422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: Ovr_walkAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -479017810, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1286172563, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1776045478, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: runFrame
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 72a0d011-02b6-4c4d-b9aa-25dd1911e043
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &7275204175381319932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: Ovr_fallAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -479017810, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys:
+      - runFrame
+      values: 00000000
+  - sprite: {fileID: 1286172563, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys:
+      - runFrame
+      values: 01000000
+  - sprite: {fileID: 1776045478, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys:
+      - runFrame
+      values: 02000000
+  controlDriver:
+    name: runFrame
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 4421b4ee-26b8-492f-8c45-60639ed5f9a1
+  drivers:
+    keys: []
+    values: 
+--- !u!114 &7568137916057254638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: Ovr_crouchAnim
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 305045214, guid: ebde8b5aeec48ff4c870f12c498ba4ae, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: 
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 1f728597-5f63-4ae1-abef-0ad74af5ea59
+  drivers:
+    keys: []
+    values: 
