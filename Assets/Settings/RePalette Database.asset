@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 515d515de727084478ba30831d11d4c6, type: 3}
+  m_Name: RePalette Database
+  m_EditorClassIdentifier: 
+  emptyCategoryGroups: []
+  themeAssets:
+  - path: Parts/Tiles
+    entries:
+    - humanKey: New Entry
+      constraintIndex: 1
+      addressableKey: 24278
+      enforcedSubAssets: []
+--- !u!114 &275146714235685323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc5dca8f51539347a688b9507474db9, type: 3}
+  m_Name: RePalette Database Filter
+  m_EditorClassIdentifier: 
+  editorFilter:
+    gameStyle: SMB1
+    theme: Overworld

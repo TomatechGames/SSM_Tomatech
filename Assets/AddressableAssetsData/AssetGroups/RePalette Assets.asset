@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: RePalette Assets
+  m_EditorClassIdentifier: 
+  m_GroupName: RePalette Assets
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 1206b63d89355d14ab4d4f782f75e154
+  m_SerializeEntries:
+  - m_GUID: a2b0c2aacbac7414a83b3c4df9198449
+    m_Address: Assets/Themes/SMB1/Ground/Parts/Terrain/SMB1 Brick.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RPt_SMB1-Overworld
+    - RPe_24278
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 029abb889bba8ed49a8520e35caf804f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f0cfb75397cddd146ab35feb359f345d, type: 2}
+    - {fileID: 11400000, guid: 37e17e53632849f4ea45ddcf03a433b8, type: 2}

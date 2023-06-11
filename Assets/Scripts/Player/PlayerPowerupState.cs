@@ -236,7 +236,7 @@ public class PlayerPowerupState : ScriptableObject
     public virtual void Appearance(float dTime, PlayerControllerProxy playerProxy)
     {
         if (playerProxy.SimulationInfo.inputState.moveDirection.x != 0)
-            playerProxy.SimulationInfo.facingRight = playerProxy.SimulationInfo.inputState.moveDirection.x > 0;
+            playerProxy.SimulationInfo.facingRight = playerProxy.SimulationInfo.inputState.moveDirection.x > 0 == (!playerProxy.SimulationInfo.skidding || playerProxy.SimulationInfo.jumpedThisSim || !playerProxy.SimulationInfo.latestCollisionInfo.below);
 
         if (playerProxy.SimulationInfo.latestCollisionInfo.below || playerProxy.SimulationInfo.jumpedThisSim) // only do this in SMB1
         {

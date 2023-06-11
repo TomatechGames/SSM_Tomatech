@@ -1,15 +1,15 @@
 using SimpleJSON;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(Tilemap))]
 public class TilemapDataContainer : MonoBehaviour
 {
+    public const string CHECKPOINT_KEY = "_ChkPt";
     Tilemap m_AttachedTilemap;
-    Tilemap AttachedTilemap
+    public Tilemap AttachedTilemap
     {
         get
         {
@@ -20,62 +20,57 @@ public class TilemapDataContainer : MonoBehaviour
     }
 
     [SerializeField]
-    [TextArea]
-    string tempSource;
-    Dictionary<Vector3Int, JSONNode> nodeMap = new();
+    Dictionary<Vector3Int, JSONObject> tileDataDict = new();
 
-    private void Awake()
+#if UNITY_EDITOR
+    int dictSetCount = 0;
+    private void Update()
     {
-        Parse(tempSource);
+        if (dictSetCount > 10)
+            Debug.Log("Lots of tiles wrote to dictionary this frame");
+        dictSetCount = 0;
     }
+#endif
 
-    [ContextMenu("Test Compile")]
-    void CompileToTemp()
-    {
-        tempSource = Compile();
-    }
 
-    [ContextMenu("Test Map")]
-    void TestMap()
-    {
-        JSONNode testNode = JSON.Parse("{\"test\":\"world\"}");
-        Debug.Log(testNode);
-        AddNode(Vector3Int.one, testNode);
-        Debug.Log(GetNode(Vector3Int.one)["test"]);
-    }
-
-    void AddNode(Vector3Int coords, JSONNode node)
+    void SetData(Vector3Int coords, JSONObject node)
     {
         coords.z = 0;
-        nodeMap.Add(coords, node);
+        tileDataDict.Add(coords, node);
+        dictSetCount++;
     }
 
-    JSONNode GetNode(Vector3Int coords)
+    JSONNode GetData(Vector3Int coords)
     {
         coords.z = 0;
-        return nodeMap[coords];
+        if (tileDataDict.ContainsKey(coords))
+            return tileDataDict[coords];
+        return null;
     }
 
-    void Parse(string toParse)
+    void WriteCheckpointData(string toParse)
     {
         JSONNode root = JSON.Parse(toParse);
-        if (root != null)
+        if (root != null && root.IsObject)
         {
-            foreach (var kvp in root.Linq)
+            foreach (var kvp in root.AsObject)
             {
                 string[] splitCoords = kvp.Key.Split(',');
                 Vector3Int coords = new(int.Parse(splitCoords[0]), int.Parse(splitCoords[1]), 0);
-                nodeMap.Add(coords, kvp.Value);
+                if (!tileDataDict.ContainsKey(coords))
+                    tileDataDict[coords] = new();
+                tileDataDict[coords][CHECKPOINT_KEY] = kvp.Value;
             }
         }
     }
 
-    string Compile()
+    string ReadCheckpointData()
     {
-        JSONNode root = new JSONObject();
-        foreach (var kvp in nodeMap)
+        JSONObject root = new();
+        foreach (var kvp in tileDataDict)
         {
-            root.Add($"{kvp.Key.x},{kvp.Key.y}", kvp.Value);
+            if(kvp.Value.ContainsKey(CHECKPOINT_KEY))
+            root.Add($"{kvp.Key.x},{kvp.Key.y}", kvp.Value[CHECKPOINT_KEY]);
         }
         return root.ToString();
     }

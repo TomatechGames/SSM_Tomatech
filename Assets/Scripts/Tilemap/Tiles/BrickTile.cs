@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 using PlayerControllerProxy = PlayerController.PlayerControllerProxy;
 
 [CreateAssetMenu(menuName ="Tomatech/Tiles/BrickTile")]
-public class BrickTile : AnimatedTile, IBreakableTile, IBumpableTile
+public class BrickTile : ThemeRuleTile, IBreakableTile, IBumpableTile
 {
     [SerializeField]
     GameObject breakParticlePrefab;

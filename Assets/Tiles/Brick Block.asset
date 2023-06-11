@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70832bdc2838bc64a8af241cabe7c559, type: 3}
   m_Name: Brick Block
   m_EditorClassIdentifier: 
-  m_AnimatedSprites:
-  - {fileID: 1643098596, guid: 8974f7c3b1d78d34aade856f1b405617, type: 3}
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
-  m_AnimationStartTime: 0
-  m_AnimationStartFrame: 0
-  m_TileColliderType: 2
+  m_Tile: {fileID: 0}
+  m_Sprites: []
+  m_GameObjects: []
+  m_InstanceTile: {fileID: 0}
+  addressableKey: 
+  replacementTileAddress:
+    addressableKey: 24278
+    subAssetKey: 
   breakParticlePrefab: {fileID: 7423313289893077284, guid: f6460b150c2ebfd49a1658b068c991bb, type: 3}
   bumpFXPrefab: {fileID: 5512913069059907080, guid: f9a5457b3d4faba43b27856f6344e9f9, type: 3}
   tileOnBumpComplete: {fileID: 11400000}

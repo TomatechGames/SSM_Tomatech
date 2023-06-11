@@ -11,4 +11,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tomatech_Redesign.unity
     guid: 89bbc8b18f6e24840a325854421462aa
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 26ab7bd01d5a5ae4aac5d96284ea3829, type: 2}

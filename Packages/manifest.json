@@ -1,7 +1,11 @@
 {
   "dependencies": {
     "com.aarthificial.reanimation": "https://github.com/TomatechGames/reanimation.git",
+    "com.github.bunny83.simplejson": "https://github.com/darktable/SimpleJSON.git#unity-package",
+    "com.tomatech.afass": "https://github.com/TomatechGames/AFASS.git",
     "com.tomatech.reanimationgraph": "https://github.com/TomatechGames/Reanimation-Graph.git",
+    "com.tomatech.repalette": "https://github.com/TomatechGames/RePalette.git",
+    "com.unity.addressables": "1.21.10",
     "com.unity.cinemachine": "2.9.4",
     "com.unity.collab-proxy": "1.17.7",
     "com.unity.feature.2d": "1.0.0",

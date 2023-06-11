@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
-    <ui:VisualElement style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-direction: row;">
-        <ui:TextField picking-mode="Ignore" label="Address" binding-path="key" style="flex-grow: 1; flex-shrink: 1;" />
-        <uie:ObjectField label="Value" binding-path="value" style="flex-grow: 1; flex-shrink: 1;" />
-    </ui:VisualElement>
-</ui:UXML>
