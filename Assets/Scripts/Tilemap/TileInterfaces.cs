@@ -9,12 +9,12 @@ public interface IBreakableTile
 {
     public void BreakTile(Tilemap map, Vector3Int coordinates, GameObject breakSource, PlayerControllerProxy playerProxy = null);
 
-    protected static void BasicBreakTile(Tilemap map, Vector3Int coordinates, GameObject particlePrefab)
+    protected static void BasicBreakTile(Tilemap map, Vector3Int coordinates, GameObject particleInstance)
     {
-        if (particlePrefab)
+        if (particleInstance)
         {
-            GameObject spawned = Object.Instantiate(particlePrefab);
-            spawned.transform.position = map.CellToWorld(coordinates)+(Vector3)(Vector2.one*0.5f);
+            //GameObject spawned = Object.Instantiate(particleInstance);
+            particleInstance.transform.position = map.CellToWorld(coordinates)+(Vector3)(Vector2.one*0.5f);
         }
         map.SetTile(coordinates, null);
     }

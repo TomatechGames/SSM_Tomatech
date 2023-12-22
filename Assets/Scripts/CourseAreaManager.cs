@@ -9,7 +9,41 @@ using UnityEngine;
 public class CourseAreaManager : MonoBehaviour
 {
     [SerializeField]
+    PhysicsSimulator simulator;
+    [SerializeField]
     SaveManager saveManager;
+
+    [SerializeField]
+    SSMThemeFilter themeFilter;
+    [SerializeField]
+    bool loadOnStart;
+    [SerializeField]
+    [TextArea]
+    string dataToLoadOnStart;
+
+    private void Start()
+    {
+        RepaletteResourceManager.SetThemeFilter(themeFilter);
+        RepaletteResourceManager.onThemeUpdateCompleted += RefreshTilemaps;
+        if (loadOnStart)
+            StartLoad(dataToLoadOnStart);
+        else
+            UpdateTheme();
+    }
+
+    [ContextMenu("Update Theme")]
+    public void UpdateTheme()
+    {
+        RepaletteResourceManager.UpdateRegisteredThemeables().JustRun();
+    }
+
+    void RefreshTilemaps()
+    {
+        foreach (var map in saveManager.SavableTilemaps)
+        {
+            map.RefreshAllTiles();
+        }
+    }
 
     [ContextMenu("Save")]
     public void StartSave()
@@ -18,16 +52,14 @@ public class CourseAreaManager : MonoBehaviour
     }
 
     [ContextMenu("Load")]
-    public void StartLoad()
-    {
-        var task = LoadTask(JSON.Parse(GUIUtility.systemCopyBuffer).AsObject);
-        if (task.Exception is not null)
-            Debug.LogException(task.Exception);
-    }
+    public void StartLoad() => StartLoad(GUIUtility.systemCopyBuffer);
+    public void StartLoad(string rawData) => LoadTask(JSON.Parse(rawData).AsObject).JustRun();
 
     async Task LoadTask(JSONObject levelData)
     {
-        await RepaletteResourceManager.UpdateRegisteredThemeables();
+        simulator.HaltSimulation();
         await saveManager.Load(levelData);
+        await RepaletteResourceManager.UpdateRegisteredThemeables();
+        simulator.ResumeSimulation();
     }
 }

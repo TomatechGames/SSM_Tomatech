@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
-  m_DefaultGroup: 8f5215b0fca643e4d8e1ad112777b3e4
+  m_DefaultGroup: 56e7768efb8d0cd4ea403bba29f1cdef
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 79779b7255ea5d0893b901b88cbe5390
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -45,7 +45,6 @@ MonoBehaviour:
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
   - {fileID: 11400000, guid: 2f3ef58d8ccef12418df619d44d0d931, type: 2}
-  - {fileID: 11400000, guid: bfb07d79b4ae515489199d532385b5a4, type: 2}
   - {fileID: 11400000, guid: 38b6f11632304714eaa9c659cb5cbe1c, type: 2}
   - {fileID: 11400000, guid: 8ae8e8a67f28b1f4e96be1141191025a, type: 2}
   m_BuildSettings:
@@ -91,6 +90,16 @@ MonoBehaviour:
     - default
     - RPt_SMB1-Overworld
     - RPe_24278
+    - RPe_-29942
+    - RPe_-1813
+    - RPt_SMB1-Underground
+    - RPe_-19310
+    - RPe_-697
+    - RPe_17344
+    - RPe_-3689
+    - RPe_-18158
+    - RPe_7596
+    - RPe_-29074
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 53074fb3886f56945ad7acb0c36a84ec, type: 2}

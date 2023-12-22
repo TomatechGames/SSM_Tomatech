@@ -118,10 +118,10 @@ public class SSMThemeFilter : ThemeFilterBase
     async Task<IResourceLocation> TryGetThemeAssetLocation(string fromTheme, string objectKey)
     {
         var fullKey = gameStyle + ts + fromTheme.Split(inh).First();
-        Debug.Log($"Scanning {fullKey} for {objectKey}");
-        var locationHandle = Addressables.LoadResourceLocationsAsync(new List<string>() { "RPt_"+fullKey, "RPe_"+objectKey }, Addressables.MergeMode.Intersection).Task;
+        //Debug.Log($"Scanning {fullKey} for {objectKey}");
+        var locationHandle = Addressables.LoadResourceLocationsAsync(new List<string>() { THEME_PREFIX+fullKey, ENTRY_PREFIX+objectKey }, Addressables.MergeMode.Intersection).Task;
         await locationHandle;
-        Debug.Log("awaited");
+        //Debug.Log("awaited");
         if (locationHandle.Result.Count == 0)
         {
             if (fromTheme.Split(inh).Length == 2)
@@ -136,7 +136,7 @@ public class SSMThemeFilter : ThemeFilterBase
                 return null;
             }
         }
-        locationHandle.Result.ToList().ForEach(location => Debug.Log(location.PrimaryKey));
+        //locationHandle.Result.ToList().ForEach(location => Debug.Log(location.PrimaryKey));
         return locationHandle.Result[0];
     }
 }

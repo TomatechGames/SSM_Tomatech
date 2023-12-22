@@ -24,6 +24,62 @@ MonoBehaviour:
     - RPt_SMB1-Overworld
     - RPe_24278
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39e7677f967ee9d4c8596cf7c915b6ed
+    m_Address: Assets/Themes/SMB1/Ground/Parts/Terrain/SMB1 Ground.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RPt_SMB1-Overworld
+    - RPe_-1813
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4911596cb90a1b54ebe996ce0f779449
+    m_Address: Assets/Themes/Sample Slope.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RPt_SMB1-Underground
+    - RPe_7596
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af42b4ab178c2204fa62c4ab40e12d22
+    m_Address: Assets/Themes/SMB1/Ground/SMB1 Particles (TODO merge to relevant sheets).png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RPt_SMB1-Overworld
+    - RPe_-19310
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25b99ed00083d8f4d814b74f5d8fa587
+    m_Address: Assets/Themes/SMB1/Ground/themeOverridetest.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RPt_SMB1-Underground
+    - RPe_-19310
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d22ef2660f8ad804f89b43bf8db298a4
+    m_Address: Assets/Themes/SMB1/Ground/Parts/Terrain/SMB1 Slope.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RPt_SMB1-Overworld
+    - RPe_7596
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af7f5fd2aaa17384584687f5a55e7469
+    m_Address: Assets/Themes/SMB1/Ground/Parts/Terrain/SMB1 Steep Slope.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RPt_SMB1-Overworld
+    - RPe_-29074
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11f972dbe42aaca4c9b0dff559c82ee2
+    m_Address: Assets/Themes/Sample Ground.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RPt_SMB1-Underground
+    - RPe_-1813
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72f8ebee4ecca7548950d2b030f1235d
+    m_Address: Assets/Themes/Sample Steep Slope.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RPt_SMB1-Underground
+    - RPe_-29074
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 029abb889bba8ed49a8520e35caf804f, type: 2}
   m_SchemaSet:

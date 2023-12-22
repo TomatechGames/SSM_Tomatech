@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using PlayerControllerProxy = PlayerController.PlayerControllerProxy;
@@ -14,12 +15,21 @@ public class BrickTile : ThemeRuleTile, IBreakableTile, IBumpableTile
     [SerializeField]
     TileBase tileOnBumpComplete;
 
-    public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
+    public override async Task UpdateThemeContent()
     {
-        base.GetTileData(position, tilemap, ref tileData);
-        //unlock transform
-        tileData.flags &= ~TileFlags.LockTransform;
+        await base.UpdateThemeContent();
+        if(breakParticlePrefab && breakParticlePrefab.TryGetComponent<ThemedParticleRetriever>(out var particleTheme))
+        {
+            await particleTheme.UpdateThemeContent();
+        }
     }
+
+    //public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
+    //{
+    //    base.GetTileData(position, tilemap, ref tileData);
+    //    //unlock transform
+    //    tileData.flags &= ~TileFlags.LockTransform;
+    //}
 
     public void BumpTile(Tilemap map, Vector3Int coordinates, IBumpableTile.BumpDirection dir, GameObject bumpSource, PlayerControllerProxy playerProxy = null)
     {
@@ -32,6 +42,6 @@ public class BrickTile : ThemeRuleTile, IBreakableTile, IBumpableTile
 
     public void BreakTile(Tilemap map, Vector3Int coordinates, GameObject breakSource, PlayerControllerProxy playerProxy = null)
     {
-        IBreakableTile.BasicBreakTile(map, coordinates, breakParticlePrefab);
+        IBreakableTile.BasicBreakTile(map, coordinates, Instantiate(breakParticlePrefab));
     }
 }

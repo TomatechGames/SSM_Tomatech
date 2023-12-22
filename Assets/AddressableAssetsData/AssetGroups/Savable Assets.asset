@@ -12,11 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: Savable Assets
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: Savable Assets
   m_Data:
     m_SerializedData: []
   m_GUID: 56e7768efb8d0cd4ea403bba29f1cdef
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: cbe9015679fce1c43a70b51d43b17eaa
+    m_Address: Brick Block
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e37b5a869cf62e438af2529557202f9
+    m_Address: Ground
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7a53ae9a423d1247b096cea96028a69
+    m_Address: FireFlower
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3837f3d7b497be942a36a1b87670a6e3
+    m_Address: Steep Slope
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1fd74d7a089ac6c47a8d0c4a2fff1c1e
+    m_Address: Slope
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 029abb889bba8ed49a8520e35caf804f, type: 2}
   m_SchemaSet:

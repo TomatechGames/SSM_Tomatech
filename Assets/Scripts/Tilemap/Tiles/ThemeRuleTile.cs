@@ -6,7 +6,7 @@ using Tomatech.RePalette;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-[CreateAssetMenu(menuName = "Tomatech/ThemeTile")]
+[CreateAssetMenu(menuName = "Tomatech/Tiles/ThemeRuleTile")]
 public class ThemeRuleTile : RuleOverrideTile, ISavable, IThemeable
 {
     [Header("DON'T MODIFY ABOVE HERE")]
@@ -22,10 +22,10 @@ public class ThemeRuleTile : RuleOverrideTile, ISavable, IThemeable
     private new void OnEnable()
     {
         RepaletteResourceManager.RegisterThemeable(this);
-        var _ = UpdateThemeContent();
+        UpdateThemeContent().JustRun();
     }
 
-    public async Task UpdateThemeContent()
+    public virtual async Task UpdateThemeContent()
     {
         var assetTask = replacementTileAddress?.GetAsset();
         if (assetTask != null)
@@ -33,7 +33,6 @@ public class ThemeRuleTile : RuleOverrideTile, ISavable, IThemeable
             await assetTask;
             m_InstanceTile = assetTask.Result;
             m_Tile = m_InstanceTile;
-            Debug.Log(assetTask.Result);
             Override();
         }
     }

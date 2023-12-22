@@ -14,11 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emptyCategoryGroups: []
   themeAssets:
-  - path: Parts/Tiles
+  - path: Parts/Terrain
     entries:
-    - humanKey: New Entry
+    - humanKey: Brick Block
       constraintIndex: 1
       addressableKey: 24278
+      enforcedSubAssets: []
+    - humanKey: Ground
+      constraintIndex: 1
+      addressableKey: -1813
+      enforcedSubAssets: []
+    - humanKey: Slope
+      constraintIndex: 1
+      addressableKey: 7596
+      enforcedSubAssets: []
+    - humanKey: Steep Slope
+      constraintIndex: 1
+      addressableKey: -29074
+      enforcedSubAssets: []
+  - path: Parts/Effects
+    entries:
+    - humanKey: Brick Break
+      constraintIndex: 2
+      addressableKey: -19310
       enforcedSubAssets: []
 --- !u!114 &275146714235685323
 MonoBehaviour:

@@ -33,8 +33,22 @@ public class PhysicsSimulator : SingletonBehavior<PhysicsSimulator>
         registeredSimulatables.Clear();
     }
 
+    bool simulationHalted = true;
+
+    public void ResumeSimulation()
+    {
+        simulationHalted = false;
+    }
+
+    public void HaltSimulation()
+    {
+        simulationHalted = true;
+    }
+
     private void Update()
     {
+        if (simulationHalted)
+            return;
         float totalDeltaTime = Time.deltaTime + deltaTimeRemainder;
         int simCount = Mathf.FloorToInt(totalDeltaTime / SIM_DELTA_TIME);
         deltaTimeRemainder = totalDeltaTime - (simCount * SIM_DELTA_TIME);
@@ -44,7 +58,7 @@ public class PhysicsSimulator : SingletonBehavior<PhysicsSimulator>
         {
             foreach (var simulatable in registeredSimulatables)
             {
-                if (!simsToRemove.Contains(simulatable))
+                if (!simsToRemove.Contains(simulatable) && simulatable.SimulationActive)
                     simulatable.Simulate();
             }
             //simulationCount++;

@@ -20,22 +20,22 @@ public class PlayerController : MonoBehaviour, ISimulatable
     [SerializeReference] PlayerPowerupState.PowerupData powerupData;
     public PlayerPowerupState PowerupState => powerupState;
 
-    [Space]
-    [SerializeField] float walkMovementSpeed = 5;
-    [SerializeField] float runMovementSpeed = 12;
-    [SerializeField] float stillToWalkTime = 0.25f;
-    [SerializeField] float walkToRunTime = 0.75f;
-    [SerializeField] float runToStillTime = 1f;
-    [SerializeField] float runSkidTime = 0.75f;
-    [SerializeField] float stillJumpHeight = 4;
-    [SerializeField] float walkJumpHeight = 5;
-    [SerializeField] float runJumpHeight = 5.5f;
-    [SerializeField] float minJumpHeight = 1;
-    [SerializeField] float jumpSpeed = 12;
-    [SerializeField] float gravityForce = 50;
-    [SerializeField] float xMaxSpeed = 20;
-    [SerializeField] float maxJumpBuffer = 0.1f;
-    [SerializeField] Vector2 yMinMaxVelocity = new(-13, 20);
+    //[Space]
+    //[SerializeField] float walkMovementSpeed = 5;
+    //[SerializeField] float runMovementSpeed = 12;
+    //[SerializeField] float stillToWalkTime = 0.25f;
+    //[SerializeField] float walkToRunTime = 0.75f;
+    //[SerializeField] float runToStillTime = 1f;
+    //[SerializeField] float runSkidTime = 0.75f;
+    //[SerializeField] float stillJumpHeight = 4;
+    //[SerializeField] float walkJumpHeight = 5;
+    //[SerializeField] float runJumpHeight = 5.5f;
+    //[SerializeField] float minJumpHeight = 1;
+    //[SerializeField] float jumpSpeed = 12;
+    //[SerializeField] float gravityForce = 50;
+    //[SerializeField] float xMaxSpeed = 20;
+    //[SerializeField] float maxJumpBuffer = 0.1f;
+    //[SerializeField] Vector2 yMinMaxVelocity = new(-13, 20);
     //[Space]
     //public Vector2 baseSize;
     //public Vector2 crouchSize;

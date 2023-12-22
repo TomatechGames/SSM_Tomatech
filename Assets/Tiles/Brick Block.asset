@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70832bdc2838bc64a8af241cabe7c559, type: 3}
   m_Name: Brick Block
   m_EditorClassIdentifier: 
-  m_Tile: {fileID: 0}
+  m_Tile: {fileID: 11400000, guid: a2b0c2aacbac7414a83b3c4df9198449, type: 2}
   m_Sprites: []
   m_GameObjects: []
-  m_InstanceTile: {fileID: 0}
-  addressableKey: 
+  m_InstanceTile: {fileID: 11400000, guid: a2b0c2aacbac7414a83b3c4df9198449, type: 2}
+  addressableKey: Brick Block
   replacementTileAddress:
     addressableKey: 24278
     subAssetKey: 
