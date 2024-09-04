@@ -1,4 +1,4 @@
-# SuperSmashyMaker_Prod
+# SSM_Tomatech
  
 My contributions to turn Super Smashy Maker into a playable experience with an easily extendable set of subsystems.
 
